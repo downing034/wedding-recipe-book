@@ -230,7 +230,7 @@ function RecipeBookApp() {
 
   // Get unique values for filters
   const cuisines = [...new Set(recipes.map(r => r.cuisine).filter(Boolean))].sort();
-  const cookMethods = [...new Set(recipes.flatMap(r => r.cookMethod))].sort();
+  // const cookMethods = [...new Set(recipes.flatMap(r => r.cookMethod))].sort();
 
   const handleTypeSelection = (type: string) => {
     setSelectedType(type === 'all' ? '' : type);
