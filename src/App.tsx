@@ -150,10 +150,19 @@ function RecipeBookApp() {
   const [selectedCookMethod, setSelectedCookMethod] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [showMobileFilters, setShowMobileFilters] = useState(false);
+  // const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [wakeLockEnabled, setWakeLockEnabled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileTypeSelector, setShowMobileTypeSelector] = useState(true);
+
+
+  if (false) {
+    setIsVegetarian(false)
+    setIsVegan(false)
+    setIsGlutenFree(false)
+    setSelectedCookMethod('')
+    setSelectedDifficulty('')
+  }
 
   // Check if mobile
   useEffect(() => {
