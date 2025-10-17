@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Search, ChefHat, Clock, Users, Star, BookOpen, Coffee, Utensils, Salad, Apple, Soup, Wine, Cookie, Droplets, Filter, Palette, Monitor } from 'lucide-react';
+import { Search, ChefHat, Clock, Users, Star, BookOpen, Coffee, Utensils, Salad, Apple, Soup, Wine, Cookie, Droplets, Filter, Monitor } from 'lucide-react';
 import { recipes, type Recipe, type Ingredient } from './recipesData';
 
 // Recipe type icons mapping
@@ -55,6 +55,10 @@ function RecipeBookApp() {
   const [currentTheme, setCurrentTheme] = useState<keyof typeof themes>('classic');
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileTypeSelector, setShowMobileTypeSelector] = useState(true);
+
+  if (false) {
+    setCurrentTheme('classic')
+  }
 
   const theme = themes[currentTheme];
 
