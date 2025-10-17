@@ -336,13 +336,13 @@ function RecipeBookApp() {
             <ChefHat className={`w-8 h-8 ${theme.textMuted}`} />
             <h1 className={`text-2xl font-bold ${theme.text}`}>Recipe Book</h1>
             <div className="ml-auto flex items-center gap-2">
-              <button
+              {/* <button
                 onClick={() => setCurrentTheme('classic')}
                 className={`p-2 rounded-lg border-2 ${currentTheme === 'classic' ? 'border-amber-600 bg-amber-50' : 'border-gray-300'}`}
                 title="Classic Theme"
               >
                 <Palette className="w-4 h-4" />
-              </button>
+              </button> */}
               {isMobile && (
                 <button
                   onClick={() => setShowMobileTypeSelector(true)}
