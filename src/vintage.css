@@ -1,0 +1,240 @@
+/* Vintage Theme Specific Styles */
+
+/* Paper texture overlay for backgrounds */
+.vintage-paper-texture {
+  position: relative;
+}
+
+.vintage-paper-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(139, 110, 99, 0.02) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(139, 110, 99, 0.02) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(139, 110, 99, 0.02) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(139, 110, 99, 0.02) 3px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Coffee stain effect */
+.vintage-stain-1 {
+  position: relative;
+}
+
+.vintage-stain-1::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 110, 99, 0.08) 0%,
+    rgba(139, 110, 99, 0.04) 40%,
+    transparent 70%
+  );
+  top: 10%;
+  right: 5%;
+  pointer-events: none;
+}
+
+/* Aged corners */
+.vintage-aged-corners {
+  position: relative;
+}
+
+.vintage-aged-corners::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(139, 110, 99, 0.06) 0%, transparent 20%),
+    radial-gradient(circle at 100% 0%, rgba(139, 110, 99, 0.06) 0%, transparent 20%),
+    radial-gradient(circle at 0% 100%, rgba(139, 110, 99, 0.06) 0%, transparent 20%),
+    radial-gradient(circle at 100% 100%, rgba(139, 110, 99, 0.06) 0%, transparent 20%);
+  pointer-events: none;
+}
+
+/* Typewriter text effect */
+.vintage-typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+}
+
+/* Handwritten style for titles */
+.vintage-handwritten {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Recipe card recipe index card effect */
+.vintage-index-card {
+  background: 
+    linear-gradient(to right, #fffbf0 0%, #fffbf0 20px, transparent 20px),
+    linear-gradient(#f5f1e8 0%, #fffbf0 100%);
+  box-shadow: 
+    0 3px 6px rgba(62, 39, 35, 0.2),
+    inset 0 0 80px rgba(139, 110, 99, 0.04),
+    inset 20px 0 0 rgba(139, 110, 99, 0.08);
+}
+
+/* Aged paper with lines (for recipe cards) */
+.vintage-lined-paper {
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 31px,
+    rgba(139, 110, 99, 0.15) 31px,
+    rgba(139, 110, 99, 0.15) 32px
+  );
+  background-position: 0 8px;
+}
+
+/* Notebook ring holes effect */
+.vintage-ring-holes {
+  position: relative;
+  padding-left: 40px;
+}
+
+.vintage-ring-holes::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  bottom: 20px;
+  width: 8px;
+  background: 
+    radial-gradient(circle, rgba(139, 110, 99, 0.3) 0%, transparent 50%),
+    radial-gradient(circle, rgba(139, 110, 99, 0.3) 0%, transparent 50%),
+    radial-gradient(circle, rgba(139, 110, 99, 0.3) 0%, transparent 50%);
+  background-size: 8px 8px, 8px 8px, 8px 8px;
+  background-position: center 10%, center 50%, center 90%;
+  background-repeat: no-repeat;
+}
+
+/* Vintage stamp effect */
+.vintage-stamp {
+  border: 3px double #8d6e63;
+  padding: 8px 16px;
+  background: #fffbf0;
+  box-shadow: 0 2px 4px rgba(62, 39, 35, 0.2);
+  transform: rotate(-2deg);
+}
+
+/* Vintage button with embossed effect */
+.vintage-button {
+  background: linear-gradient(to bottom, #a1887f 0%, #8d6e63 100%);
+  border: 2px solid #6d4c41;
+  box-shadow: 
+    0 2px 4px rgba(62, 39, 35, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.vintage-button:hover {
+  background: linear-gradient(to bottom, #8d6e63 0%, #6d4c41 100%);
+  box-shadow: 
+    0 4px 6px rgba(62, 39, 35, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Torn paper edge effect */
+.vintage-torn-edge {
+  position: relative;
+  border-bottom: none;
+}
+
+.vintage-torn-edge::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: 
+    linear-gradient(135deg, transparent 33.33%, #fffbf0 33.33%, #fffbf0 66.67%, transparent 66.67%),
+    linear-gradient(45deg, transparent 33.33%, #fffbf0 33.33%, #fffbf0 66.67%, transparent 66.67%);
+  background-size: 8px 10px;
+  background-position: 0 0, 4px 0;
+}
+
+/* Faded ink effect for text */
+.vintage-faded-ink {
+  color: rgba(62, 39, 35, 0.85);
+  text-shadow: 0 0 1px rgba(62, 39, 35, 0.1);
+}
+
+/* Recipe divider line */
+.vintage-divider {
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #8d6e63,
+    #8d6e63 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  opacity: 0.4;
+  margin: 20px 0;
+}
+
+/* Disable all glow effects for vintage */
+.vintage-theme .hover-glow-blue:hover,
+.vintage-theme .hover-glow-blue-lg:hover,
+.vintage-theme .glow-blue,
+.vintage-theme .glow-blue-md,
+.vintage-theme .glow-blue-lg {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* Add subtle vintage shadows instead */
+.vintage-theme .hover-lift:hover {
+  box-shadow: 0 4px 8px rgba(62, 39, 35, 0.2);
+}
+
+/* Category tiles vintage styling */
+.vintage-theme .category-tile {
+  border: 2px solid #8d6e63;
+  box-shadow: 
+    0 3px 6px rgba(62, 39, 35, 0.25),
+    inset 0 0 40px rgba(139, 110, 99, 0.05);
+}
+
+/* Search bar vintage styling */
+.vintage-theme input[type="text"],
+.vintage-theme input[type="search"] {
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #d7ccc8;
+  background: #fffbf0;
+  box-shadow: inset 0 2px 4px rgba(62, 39, 35, 0.1);
+}
+
+.vintage-theme input[type="text"]:focus,
+.vintage-theme input[type="search"]:focus {
+  border-color: #8d6e63;
+  box-shadow: 
+    inset 0 2px 4px rgba(62, 39, 35, 0.1),
+    0 0 0 3px rgba(141, 110, 99, 0.1);
+}

@@ -1,42 +1,143 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* Import Vintage Theme Styles */
+@import url('./vintage.css');
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
+/* Modal Animations */
+@keyframes modalSlideUp {
   from {
-    transform: rotate(0deg);
+    transform: translateY(100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes modalSlideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
   }
 }
 
-.card {
-  padding: 2em;
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@keyframes backdropFadeOut {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Glow Utility Classes for Dark Theme */
+
+/* Base glow effects */
+.glow-blue {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.glow-blue-md {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.glow-blue-lg {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+/* Hover glow effects */
+.hover-glow-blue:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover-glow-blue-lg:hover {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Text glow effects */
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.text-glow-blue-sm {
+  text-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+/* Border glow effects */
+.border-glow-blue {
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Animation-ready classes */
+.transition-glow {
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-lift-lg:hover {
+  transform: translateY(-4px);
+}
+
+/* Glass morphism effects */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-strong {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Responsive animation controls */
+@media (max-width: 768px) {
+  /* Reduce glow intensity on mobile for performance */
+  .hover-glow-blue:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  }
+  
+  .hover-glow-blue-lg:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Subtle hover effects on touch devices */
+  .hover-lift:hover {
+    transform: translateY(-1px);
+  }
+  
+  .hover-lift-lg:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respect user's motion preferences */
+  .transition-glow,
+  .hover-lift,
+  .hover-lift-lg {
+    transition: none;
+  }
+  
+  .hover-glow-blue:hover,
+  .hover-glow-blue-lg:hover {
+    transition: none;
+  }
 }
