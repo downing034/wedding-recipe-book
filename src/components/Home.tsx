@@ -62,9 +62,9 @@ const Home: React.FC<HomeProps> = ({
     { key: 'all', label: 'ALL RECIPES', image: circularImages.all },
     { key: 'quick', label: 'QUICK & EASY', image: circularImages.quick, isFilter: true },
     { key: 'vegetarian', label: 'VEGETARIAN', image: circularImages.vegetarian, isFilter: true },
-    { key: 'gluten-free', label: 'GLUTEN-FREE', image: circularImages.glutenFree, isFilter: true },
-    { key: 'instant-pot', label: 'INSTANT POT', image: circularImages.instantPot, isFilter: true },
-    { key: 'slow-cooker', label: 'SLOW COOKER', image: circularImages.slowCooker, isFilter: true },
+    { key: 'gluten', label: 'GLUTEN-FREE', image: circularImages.glutenFree, isFilter: true },
+    { key: 'instant pot', label: 'INSTANT POT', image: circularImages.instantPot, isFilter: true },
+    { key: 'slow cooker', label: 'SLOW COOKER', image: circularImages.slowCooker, isFilter: true },
     { key: 'dessert', label: 'DESSERTS', image: circularImages.dessert }
   ];
 

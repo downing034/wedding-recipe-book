@@ -151,14 +151,24 @@ const RecipeIndex: React.FC<RecipeIndexProps> = ({
     // Search filter
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(recipe =>
-        recipe.name.toLowerCase().includes(query) ||
-        (recipe.description && recipe.description.toLowerCase().includes(query)) ||
-        (recipe.attribution && recipe.attribution.toLowerCase().includes(query)) ||
-        recipe.cuisine.toLowerCase().includes(query) ||
-        recipe.tags.some((tag: string) => tag.toLowerCase().includes(query)) ||
-        recipe.ingredients.some((ing: any) => ing.item.toLowerCase().includes(query))
-      );
+      
+      // Special handling for "quick" - filter by total time ≤ 30 minutes
+      if (query === 'quick') {
+        filtered = filtered.filter(recipe => {
+          const totalTime = (recipe.prepTime || 0) + (recipe.cookTime || 0);
+          return totalTime <= 30;
+        });
+      } else {
+        // Regular text search
+        filtered = filtered.filter(recipe =>
+          recipe.name.toLowerCase().includes(query) ||
+          (recipe.description && recipe.description.toLowerCase().includes(query)) ||
+          (recipe.attribution && recipe.attribution.toLowerCase().includes(query)) ||
+          recipe.cuisine.toLowerCase().includes(query) ||
+          recipe.tags.some((tag: string) => tag.toLowerCase().includes(query)) ||
+          recipe.ingredients.some((ing: any) => ing.item.toLowerCase().includes(query))
+        );
+      }
     }
 
     // Additional filters
