@@ -28,24 +28,24 @@ const Home: React.FC<HomeProps> = ({
   // Filter for user's personal favorites
   const myFavoriteRecipes = recipes.filter(recipe => userFavorites.has(recipe.id));
 
-  // Category images from local src/images/ folder
+  // Category images from local public/images/ folder
   const categoryImages = {
-    entree: '/src/images/entrees.jpg',
-    soup: '/src/images/soups.jpg', 
-    salad: '/src/images/salads.jpg',
-    appetizer: '/src/images/appetizers.jpg',
-    side: '/src/images/sides.jpg'
+    entree: '/public/entrees.jpg',
+    soup: '/public/soups.jpg', 
+    salad: '/public/salads.jpg',
+    appetizer: '/public/appetizers.jpg',
+    side: '/public/sides.jpg'
   };
 
-  // Circular category images from local src/images/ folder
+  // Circular category images from local public/images/ folder
   const circularImages = {
-    all: '/src/images/all-recipes.jpg',
-    quick: '/src/images/quick-easy.jpg',
-    vegetarian: '/src/images/vegetarian.jpg',
-    glutenFree: '/src/images/gluten-free.jpg',
-    instantPot: '/src/images/instant-pot.jpg',
-    slowCooker: '/src/images/slow-cooker.jpg',
-    dessert: '/src/images/desserts.jpg'
+    all: '/public/all-recipes.jpg',
+    quick: '/public/quick-easy.jpg',
+    vegetarian: '/public/vegetarian.jpg',
+    glutenFree: '/public/gluten-free.jpg',
+    instantPot: '/public/instant-pot.jpg',
+    slowCooker: '/public/slow-cooker.jpg',
+    dessert: '/public/desserts.jpg'
   };
 
   // Primary categories for large cards (removed dessert)
