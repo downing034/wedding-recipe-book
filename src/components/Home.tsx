@@ -28,24 +28,24 @@ const Home: React.FC<HomeProps> = ({
   // Filter for user's personal favorites
   const myFavoriteRecipes = recipes.filter(recipe => userFavorites.has(recipe.id));
 
-  // Category images from local public/images/ folder
+  // Category images
   const categoryImages = {
-    entree: '/public/entrees.jpg',
-    soup: '/public/soups.jpg', 
-    salad: '/public/salads.jpg',
-    appetizer: '/public/appetizers.jpg',
-    side: '/public/sides.jpg'
+    entree: '/entrees.jpg',
+    soup: '/soups.jpg', 
+    salad: '/salads.jpg',
+    appetizer: '/appetizers.jpg',
+    side: '/sides.jpg'
   };
 
-  // Circular category images from local public/images/ folder
+  // Circular category images
   const circularImages = {
-    all: '/public/all-recipes.jpg',
-    quick: '/public/quick-easy.jpg',
-    vegetarian: '/public/vegetarian.jpg',
-    glutenFree: '/public/gluten-free.jpg',
-    instantPot: '/public/instant-pot.jpg',
-    slowCooker: '/public/slow-cooker.jpg',
-    dessert: '/public/desserts.jpg'
+    all: '/all-recipes.jpg',
+    quick: '/quick-easy.jpg',
+    vegetarian: '/vegetarian.jpg',
+    glutenFree: '/gluten-free.jpg',
+    instantPot: '/instant-pot.jpg',
+    slowCooker: '/slow-cooker.jpg',
+    dessert: '/desserts.jpg'
   };
 
   // Primary categories for large cards (removed dessert)
