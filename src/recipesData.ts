@@ -2,6 +2,50 @@ import type { Recipe } from "./types";
 
 export const recipes: Recipe[] = [
   {
+    id: 'restaurant-style-ranch',
+    name: 'Restaurant-Style Ranch',
+    description: 'Thin, pourable ranch dressing inspired by classic restaurant and salad-bar ranch',
+    attribution: 'Paul',
+    type: 'sauce',
+    cuisine: 'American',
+    isFavorite: true,
+    isVegetarian: true,
+    isVegan: false,
+    isGlutenFree: true,
+    cookMethod: ['no-cook'],
+    prepTime: 10,
+    cookTime: 0,
+    totalTime: 130,
+    difficulty: 'easy',
+    servings: 12,
+    ingredients: [
+      { amount: 0.75, unit: 'cup', item: 'mayonnaise' },
+      { amount: 0.5625, unit: 'cup', item: 'buttermilk' },
+      { amount: 0.25, unit: 'cup', item: 'sour cream' },
+      { amount: 2, unit: 'tablespoons', item: 'water' },
+      { amount: 1, unit: 'tablespoon', item: 'white vinegar' },
+      { amount: 1, unit: 'teaspoon', item: 'dried parsley' },
+      { amount: 1.75, unit: 'teaspoons', item: 'dried dill' },
+      { amount: 1.5, unit: 'teaspoons', item: 'garlic powder' },
+      { amount: 0.5, unit: 'teaspoon', item: 'onion powder' },
+      { amount: 0.5, unit: 'teaspoon', item: 'fine salt' },
+      { amount: 0.125, unit: 'teaspoon', item: 'black pepper' },
+      { amount: 0.125, unit: 'teaspoon', item: 'sugar' },
+      { amount: 0.25, unit: 'teaspoon', item: 'MSG', isOptional: true, notes: 'Omit if unavailable' }
+    ],
+    instructions: [
+      'Whisk together the mayonnaise, buttermilk, sour cream, water, and white vinegar until completely smooth.',
+      'Add the dried parsley, dill, garlic powder, onion powder, salt, black pepper, sugar, and optional MSG.',
+      'Whisk thoroughly until all seasonings are evenly distributed.',
+      'Refrigerate for at least 2 hours, preferably overnight, to allow the dried herbs and seasonings to fully hydrate.',
+      'Whisk again before serving.',
+      'If the ranch is too thick after chilling, add buttermilk 1 tablespoon at a time until it reaches a thin, pourable consistency.'
+    ],
+    notes: 'Designed to be thinner and more pourable than typical ranch dip, with a flavor profile inspired by restaurant and salad-bar ranch. The current version includes extra mayonnaise, buttermilk, garlic, and dill based on taste testing. Flavor and seasoning can be adjusted after chilling.',
+    tags: ['sauce', 'ranch', 'dressing', 'salad dressing', 'restaurant-style', 'salad bar', 'homemade'],
+    createdAt: '2026-08-18T00:00:00Z'
+  },
+  {
     id: 'coconut-bars-mom-simon',
     name: 'Coconut Bars',
     description: 'Classic layered coconut bars with a buttery crust and coconut-pecan topping',
