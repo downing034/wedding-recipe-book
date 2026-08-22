@@ -2,6 +2,49 @@ import type { Recipe } from "./types";
 
 export const recipes: Recipe[] = [
   {
+    id: 'spicy-pickle-dip',
+    name: 'Spicy Pickle Dip',
+    description: 'Creamy, tangy pickle dip with dill, Cajun seasoning, red pepper, and a subtle smoky warmth from cumin',
+    attribution: 'Paul',
+    type: 'sauce',
+    cuisine: 'American',
+    isFavorite: false,
+    isVegetarian: true,
+    isVegan: false,
+    isGlutenFree: true,
+    cookMethod: ['no-cook'],
+    prepTime: 15,
+    cookTime: 0,
+    totalTime: 75,
+    difficulty: 'easy',
+    servings: 10,
+    ingredients: [
+      { amount: 0.5, unit: 'cup', item: 'sour cream' },
+      { amount: 0.5, unit: 'cup', item: 'mayonnaise' },
+      { amount: 0.333, unit: 'cup', item: 'dill pickles', preparation: 'finely minced to a relish-like consistency' },
+      { amount: 1, unit: 'tablespoon', item: 'pickle juice' },
+      { amount: 1, unit: 'teaspoon', item: 'yellow mustard' },
+      { amount: 0.5, unit: 'teaspoon', item: 'onion powder' },
+      { amount: 0.25, unit: 'teaspoon', item: 'garlic powder' },
+      { amount: 0.5, unit: 'teaspoon', item: 'Cajun seasoning' },
+      { amount: 0.5, unit: 'teaspoon', item: 'ground red pepper' },
+      { amount: 0.25, unit: 'teaspoon', item: 'ground cumin' },
+      { amount: '', unit: '', item: 'salt', preparation: 'to taste' },
+      { amount: 1, unit: 'tablespoon', item: 'fresh dill', preparation: 'chopped' },
+      { amount: 1, unit: 'tablespoon', item: 'fresh chives', preparation: 'chopped' }
+    ],
+    instructions: [
+      'In a medium bowl, whisk together the sour cream, mayonnaise, pickle juice, and yellow mustard until smooth.',
+      'Stir in the onion powder, garlic powder, Cajun seasoning, ground red pepper, cumin, and salt.',
+      'Finely mince the dill pickles until they have a relish-like consistency, then stir them into the dip along with the fresh dill and chives.',
+      'Cover and refrigerate for at least 1 hour to allow the pickle and herb flavors to blend.',
+      'Stir before serving. If a thicker consistency is desired, add additional mayonnaise or sour cream.'
+    ],
+    notes: 'The pickles should be minced very finely, closer to relish than diced pickles. The Cajun seasoning, ground red pepper, and cumin give this a spicy, savory twist. Add a shake of Tobasco to boost the kick. The current version is intentionally creamy and tangy, with the pickle flavor distributed throughout rather than in large chunks.',
+    tags: ['dip', 'pickle', 'spicy', 'dill', 'cajun', 'appetizer', 'sauce'],
+    createdAt: '2026-08-22T00:00:00Z'
+  },
+  {
     id: 'restaurant-style-ranch',
     name: 'Restaurant-Style Ranch',
     description: 'Thin, pourable ranch dressing inspired by classic restaurant and salad-bar ranch',
